@@ -9,7 +9,7 @@ import random
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 # print(voices[0].id)
-engine.setProperty('voice', voices[1].id)
+engine.setProperty('voice', voices[0].id)
 
 
 def speak(audio):
@@ -28,7 +28,7 @@ def wishMe():
     else:
         speak("Good Evening!")
 
-    speak("I am Edith Sir. Please tell me how may I help you")
+    speak("I am Jarvis Sir. Please tell me how may I help you")
 
 
 def takeCommand():
@@ -76,7 +76,7 @@ if __name__ == "__main__":
             webbrowser.open("google.com")
 
         elif 'play music' in query:
-            music_dir = 'D:\Songs'
+            music_dir = //Your music folder
             songs = os.listdir(music_dir)
             speak("Playing song...")
             # print(songs)
@@ -94,13 +94,13 @@ if __name__ == "__main__":
             speak(f"Sir, the date is {strDate}")
 
         elif 'open vs code' in query:
-            codePath = "C:\\Users\\dipak\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = //vs code path
             print("opening vs code...")
             speak("opening vs code...")
             os.startfile(codePath)
 
         elif 'open vlc' in query:
-            vlcPath = "C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe"
+            vlcPath = // vlc player path
             print("opening vlc media player...")
             speak("opening vlc media player...")
             os.startfile(vlcPath)
